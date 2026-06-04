@@ -1,7 +1,9 @@
+import { NavLink } from "react-router-dom";
+
 const NavBer = () => {
 
     const links = <>
-        <li><a>Home</a></li>
+        <li><NavLink to='/'>Home</NavLink></li>
         <li><a>ABout</a></li>
     </>
 
