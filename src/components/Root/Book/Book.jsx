@@ -1,6 +1,8 @@
+
+
 const Book = ({ book }) => {
 
-    const { bookName, author, image } = book;
+    const { bookName, author, image, category, rating, tags } = book;
 
     return (
         <div>
@@ -12,14 +14,20 @@ const Book = ({ book }) => {
                         alt="Shoes" />
                 </figure>
                 <div className="card-body">
+                    <div className="flex justify-center gap-3">
+                        {
+                            tags.map(tag => <button className="btn btn-outline btn-xs">{tag}</button>)
+                        }
+                    </div>
                     <h2 className="card-title">
                         {bookName}
                         <div className="badge badge-secondary">NEW</div>
                     </h2>
                     <h2>By : {author}</h2>
-                    <div className="card-actions justify-end">
-                        <div className="badge badge-outline">Fashion</div>
-                        <div className="badge badge-outline">Products</div>
+                    <div className="border-t-2 border-dashed my-4"></div>
+                    <div className="card-actions justify-between">
+                        <div className="badge badge-outline">{category}</div>
+                        <div className="badge badge-outline">{rating} star </div>
                     </div>
                 </div>
             </div>
