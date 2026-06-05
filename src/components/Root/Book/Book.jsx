@@ -12,7 +12,7 @@ const Book = ({ book }) => {
                     <figure className="bg-blue-300 rounded-2xl m-6">
                         <img
                             src={image}
-                            className="h-[166px] my-8"
+                            className="h-41.5 my-8"
                             alt="Shoes" />
                     </figure>
                     <div className="card-body">
